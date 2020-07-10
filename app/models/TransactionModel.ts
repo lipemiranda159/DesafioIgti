@@ -12,6 +12,4 @@ let schema = new mongoose.Schema({
   type: String,
 });
 
-const TransactionModel = mongoose.model("transaction", schema);
-
-export default TransactionModel;
+export default schema;
