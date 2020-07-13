@@ -41,3 +41,5 @@ class DbService {
     this.dbContext.save(obj);
   };
 }
+
+export default DbService;
