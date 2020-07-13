@@ -13,7 +13,6 @@ class TransactionController {
 
   getTransactions = async (request: Request, response: Response) => {
     try {
-      const { take, order } = request.query;
       let result = await this.accountService.GetAllTransactions(
         this.NoFilterTransaction
       );
