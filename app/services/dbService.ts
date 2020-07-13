@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import schema from "../models/TransactionModel";
+import userSchema from "../models/UserModel";
 class DbService {
   ObjectId = mongoose.Types.ObjectId;
   private createdModel = false;

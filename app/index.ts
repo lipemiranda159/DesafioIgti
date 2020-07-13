@@ -3,7 +3,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import transactionRouter from "./routes/routes";
 import path from "path";
-import dotenv from "dotenv";
+import dotenv from "dotenv-safe";
 
 /**
  * Faz a leitura do arquivo
