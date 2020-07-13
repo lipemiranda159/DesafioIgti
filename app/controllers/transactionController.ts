@@ -12,10 +12,14 @@ class TransactionController {
   }
 
   getTransactions = async (request: Request, response: Response) => {
+    const { take } = request.params;
     try {
       let result = await this.accountService.GetAllTransactions(
         this.NoFilterTransaction
       );
+      if (take) {
+        //result = result.slice(0, parseInt(take.toString()));
+      }
       response.send(result);
     } catch (e) {
       const codeError = this.getErrorCode(e);
@@ -25,8 +29,24 @@ class TransactionController {
 
   getTransaction = async (request: Request, response: Response) => {
     try {
-      const result = await this.accountService.getTrasaction();
-      response.send(result);
+      const { id } = request.body;
+      if (id) {
+        const result = await this.accountService.getTrasaction(id);
+        response.send(result);
+      }
+    } catch (e) {
+      const codeError = this.getErrorCode(e);
+      response.status(codeError).send({ res: `${e}` });
+    }
+  };
+
+  updateTransaction = async (request: Request, response: Response) => {
+    try {
+      const { id } = request.body;
+      if (id) {
+        const result = await this.accountService.updateTrasaction(id);
+        response.send(result);
+      }
     } catch (e) {
       const codeError = this.getErrorCode(e);
       response.status(codeError).send({ res: `${e}` });
@@ -35,7 +55,7 @@ class TransactionController {
 
   addTransaction = async (request: Request, response: Response) => {
     try {
-      this.accountService.addTransaction();
+      this.accountService.addTransaction(request.body);
       response.send("ok");
     } catch (e) {
       const codeError = this.getErrorCode(e);
@@ -45,7 +65,13 @@ class TransactionController {
 
   deleteTransaction = async (request: Request, response: Response) => {
     try {
-      response.send(await this.accountService.deleteTransaction());
+      const { id } = request.body;
+      if (id) {
+        const result = await this.accountService.getTrasaction(id);
+        response.send(result);
+      }
+
+      response.send(await this.accountService.deleteTransaction(id));
     } catch (e) {
       const codeError = this.getErrorCode(e);
       response.status(codeError).send({ res: `${e}` });
