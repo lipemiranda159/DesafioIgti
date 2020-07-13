@@ -1,5 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function App() {
-  return <h1>Desafio Final do Bootcamp Full Stack</h1>;
+  const [logged, setLogged] = useState(false);
+  if (logged) {
+    return <h1>Logado</h1>;
+  } else {
+    return <h1>Faça login</h1>;
+  }
 }
