@@ -1,4 +1,7 @@
 class TransactionService {
+  updateTrasaction(id: any) {
+    throw new Error("Method not implemented.");
+  }
   deleteTransaction(id: String): any {
     throw new Error("Method not implemented.");
   }
@@ -9,7 +12,7 @@ class TransactionService {
     console.log(id);
   };
   GetAllTransactions = async (NoFilterBalance: any) => {
-    throw new Error("Method not implemented.");
+    return "";
   };
 }
 

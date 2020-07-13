@@ -18,7 +18,7 @@ class TransactionController {
         this.NoFilterTransaction
       );
       if (take) {
-        //result = result.slice(0, parseInt(take.toString()));
+        result = result.slice(0, parseInt(take.toString()));
       }
       response.send(result);
     } catch (e) {
