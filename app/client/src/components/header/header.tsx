@@ -22,20 +22,6 @@ export default function Header() {
               <li>
                 <a
                   href="javascript:void(0);"
-                  className="waves-effect waves-block waves-light notification-button"
-                  data-activates="notifications-dropdown"
-                >
-                  <i className="material-icons">
-                    notifications_none
-                    <small className="notification-badge pink accent-2">
-                      5
-                    </small>
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="javascript:void(0);"
                   className="waves-effect waves-block waves-light profile-button"
                   data-activates="profile-dropdown"
                 >
@@ -43,15 +29,6 @@ export default function Header() {
                     <span className="material-icons">perm_identity</span>
                     <i></i>
                   </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  data-activates="chat-out"
-                  className="waves-effect waves-block waves-light chat-collapse"
-                >
-                  <i className="material-icons">format_indent_increase</i>
                 </a>
               </li>
             </ul>
