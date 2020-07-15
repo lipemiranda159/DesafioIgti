@@ -8,6 +8,7 @@ const TabPanel = (props: any) => {
 
   return (
     <div
+      className="tabPanel"
       role="tabpanel"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}

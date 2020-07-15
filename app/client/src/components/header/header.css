@@ -5,16 +5,8 @@
   justify-content: center;
 }
 
-.cardOverview {
-  background-color: #d90429;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contentOverview {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.tabPanel,
+.MuiBox-root {
+  height: 100vh;
+  background-color: #eceff1;
 }
