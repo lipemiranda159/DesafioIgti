@@ -1,6 +1,8 @@
 import React from "react";
 import Remove from "./remove";
 import Add from "./add";
+import Upload from "./upload";
+
 const AcessoRapido = () => {
   return (
     <div className="col s12 m5">
@@ -11,7 +13,7 @@ const AcessoRapido = () => {
             <div className="content">
               <Remove />
               <Add />
-              <Add />
+              <Upload />
             </div>
           </div>
         </div>
