@@ -2,6 +2,7 @@ import React from "react";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import TabPanel from "./tabpanel";
+import Overview from "../content/overview";
 
 function a11yProps(index: any) {
   return {
@@ -29,7 +30,7 @@ export default function TabsPanel() {
         <Tab label="Lançamentos" {...a11yProps(1)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        Item One
+        <Overview saldo={0} />
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two
