@@ -3,7 +3,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import TabPanel from "./tabpanel";
 import Overview from "../content/overview";
-
+import Action from "./action";
 function a11yProps(index: any) {
   return {
     id: `simple-tab-${index}`,
@@ -33,7 +33,7 @@ export default function TabsPanel() {
         <Overview saldo={0} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <Action />
       </TabPanel>
     </div>
   );

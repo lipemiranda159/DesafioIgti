@@ -10,3 +10,32 @@
   height: 100vh;
   background-color: #eceff1;
 }
+
+.action {
+  background-color: white;
+  width: 70vw;
+  height: 70vh;
+}
+
+.container-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divHeader {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+}
+
+.header {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.button {
+  margin-top: 10px !important;
+  margin-left: 10px !important;
+  margin-bottom: 10px !important;
+}
